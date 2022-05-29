@@ -23,6 +23,6 @@ func goo(argc: Int, argv: UnsafeMutablePointer<UnsafeMutablePointer<CChar>>) {
 }
 
 @_cdecl("getSwiftViewController")
-func getSwiftViewController() -> UIViewController {
+func getSwiftViewController() -> UIViewController & SwiftViewControllerProtocol {
     return SwiftViewController()
 }

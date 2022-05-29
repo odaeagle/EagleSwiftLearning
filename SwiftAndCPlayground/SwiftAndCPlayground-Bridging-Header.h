@@ -6,3 +6,4 @@
 #include "module1.h"
 #include "module2.h"
 #include "ObjCViewController.h"
+#include "SwiftViewControllerProtocol.h"

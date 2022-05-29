@@ -7,8 +7,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "SwiftViewControllerProtocol.h"
 
-UIViewController* getSwiftViewController(void);
+UIViewController<SwiftViewControllerProtocol>* getSwiftViewController(void);
 
 NS_ASSUME_NONNULL_BEGIN
 
