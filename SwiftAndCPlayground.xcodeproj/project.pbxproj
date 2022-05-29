@@ -159,8 +159,8 @@
 		D3F48BB22843DB0200D53AD1 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
-				D3F48BB32843DB2B00D53AD1 /* module2.swift */,
 				D3F48BBF2843EE2200D53AD1 /* SwiftViewControllerProtocol.h */,
+				D3F48BB32843DB2B00D53AD1 /* module2.swift */,
 				D3F48BBD2843EAE500D53AD1 /* SwiftViewController.swift */,
 			);
 			path = Swift;

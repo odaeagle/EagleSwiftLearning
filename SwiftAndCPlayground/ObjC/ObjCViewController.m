@@ -28,9 +28,11 @@
 }
 
 - (void)nextButtonClicked {
-    UIViewController<SwiftViewControllerProtocol>* controller = getSwiftViewController();
+    auto id controller = getSwiftViewController();
     [controller swiftViewControllerDoSomething1:5];
     [controller swiftViewControllerDoSomething2:8];
+    [controller swiftViewController2DoSomething1:3];
+    [controller swiftViewController2DoSomething2:4];
     [self.navigationController pushViewController:controller animated:true];
 }
 

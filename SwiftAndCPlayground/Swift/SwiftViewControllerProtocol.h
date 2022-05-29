@@ -15,5 +15,12 @@
 
 @end
 
+@protocol SwiftViewControllerProtocol2 <NSObject>
+
+- (void)swiftViewController2DoSomething1:(int)num;
+- (void)swiftViewController2DoSomething2:(int)num;
+
+@end
+
 
 #endif /* SwiftViewControllerProtocol_h */
