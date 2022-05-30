@@ -12,7 +12,7 @@
 #ifndef module2_h
 #define module2_h
 
-intptr_t foo(intptr_t);
-int goo(int, char**);
+//intptr_t foo(intptr_t);
+//int goo(int, char**);
 
 #endif /* module2_h */

@@ -12,7 +12,7 @@ class LandingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-//        executeC()
+        executeC()
         executeObjC()
     }
     

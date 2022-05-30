@@ -9,14 +9,16 @@
 #include "module2.h"
 #include <stdlib.h>
 
+intptr_t foo(intptr_t);
+int goo(int, char**);
 
-intptr_t invoke_foo(intptr_t x) {
-    return foo(x);
-}
+//intptr_t invoke_foo(intptr_t x) {
+//    return foo(x);
+//}
 
 void test(int num) {
     printf("Number is %d\n", num);
-    printf("Result %d\n", invoke_foo(num));
+    printf("Result %d\n", foo(num));
     
     char* arr[] = {"meta", "mates rulez"};
     goo(2, arr);

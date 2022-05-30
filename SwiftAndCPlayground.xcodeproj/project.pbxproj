@@ -18,6 +18,8 @@
 		D3F48BB82843DE5900D53AD1 /* module1.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F48BB72843DE5900D53AD1 /* module1.m */; };
 		D3F48BBC2843EA6800D53AD1 /* ObjCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F48BBB2843EA6800D53AD1 /* ObjCViewController.m */; };
 		D3F48BBE2843EAE500D53AD1 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F48BBD2843EAE500D53AD1 /* SwiftViewController.swift */; };
+		D3F48BC128442BC000D53AD1 /* SwiftViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F48BC028442BC000D53AD1 /* SwiftViewController2.swift */; };
+		D3F48BC428442C2600D53AD1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F48BC328442C2600D53AD1 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		D3F48BBB2843EA6800D53AD1 /* ObjCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCViewController.m; sourceTree = "<group>"; };
 		D3F48BBD2843EAE500D53AD1 /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
 		D3F48BBF2843EE2200D53AD1 /* SwiftViewControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftViewControllerProtocol.h; sourceTree = "<group>"; };
+		D3F48BC028442BC000D53AD1 /* SwiftViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController2.swift; sourceTree = "<group>"; };
+		D3F48BC328442C2600D53AD1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 		D3F48B792843D9AD00D53AD1 /* SwiftAndCPlayground */ = {
 			isa = PBXGroup;
 			children = (
+				D3F48BC228442C1D00D53AD1 /* Utils */,
 				D3F48B882843D9AE00D53AD1 /* Info.plist */,
 				D3F48BAE2843DA5500D53AD1 /* SwiftAndCPlayground-Bridging-Header.h */,
 				D3F48BB62843DE2E00D53AD1 /* ObjC */,
@@ -162,6 +167,7 @@
 				D3F48BBF2843EE2200D53AD1 /* SwiftViewControllerProtocol.h */,
 				D3F48BB32843DB2B00D53AD1 /* module2.swift */,
 				D3F48BBD2843EAE500D53AD1 /* SwiftViewController.swift */,
+				D3F48BC028442BC000D53AD1 /* SwiftViewController2.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -175,6 +181,14 @@
 				D3F48BBB2843EA6800D53AD1 /* ObjCViewController.m */,
 			);
 			path = ObjC;
+			sourceTree = "<group>";
+		};
+		D3F48BC228442C1D00D53AD1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D3F48BC328442C2600D53AD1 /* Extensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,10 +323,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3F48BC128442BC000D53AD1 /* SwiftViewController2.swift in Sources */,
 				D3F48BBE2843EAE500D53AD1 /* SwiftViewController.swift in Sources */,
 				D3F48BBC2843EA6800D53AD1 /* ObjCViewController.m in Sources */,
 				D3F48B7F2843D9AD00D53AD1 /* LandingViewController.swift in Sources */,
 				D3F48B7B2843D9AD00D53AD1 /* AppDelegate.swift in Sources */,
+				D3F48BC428442C2600D53AD1 /* Extensions.swift in Sources */,
 				D3F48BB42843DB2B00D53AD1 /* module2.swift in Sources */,
 				D3F48B7D2843D9AD00D53AD1 /* SceneDelegate.swift in Sources */,
 				D3F48BB12843DA5500D53AD1 /* cmodule.c in Sources */,
