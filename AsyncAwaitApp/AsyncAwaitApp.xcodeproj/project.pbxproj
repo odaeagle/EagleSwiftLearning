@@ -14,6 +14,8 @@
 		D307C49228678A1B005F0898 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D307C49128678A1B005F0898 /* ProgressBarView.swift */; };
 		D307C49428678BC3005F0898 /* DownloadTaskCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D307C49328678BC3005F0898 /* DownloadTaskCellView.swift */; };
 		D307C49628678EA1005F0898 /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D307C49528678EA1005F0898 /* DownloadService.swift */; };
+		D307C4992867DF7F005F0898 /* Fakery in Frameworks */ = {isa = PBXBuildFile; productRef = D307C4982867DF7F005F0898 /* Fakery */; };
+		D307C49B2867DFAF005F0898 /* Faker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D307C49A2867DFAF005F0898 /* Faker.swift */; };
 		D30845252862CDA900085534 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30845242862CDA900085534 /* AppDelegate.swift */; };
 		D30845272862CDA900085534 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30845262862CDA900085534 /* SceneDelegate.swift */; };
 		D30845292862CDA900085534 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30845282862CDA900085534 /* MainViewController.swift */; };
@@ -32,6 +34,7 @@
 		D307C49128678A1B005F0898 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		D307C49328678BC3005F0898 /* DownloadTaskCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadTaskCellView.swift; sourceTree = "<group>"; };
 		D307C49528678EA1005F0898 /* DownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
+		D307C49A2867DFAF005F0898 /* Faker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Faker.swift; sourceTree = "<group>"; };
 		D30845212862CDA900085534 /* AsyncAwaitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsyncAwaitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30845242862CDA900085534 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D30845262862CDA900085534 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D307C4992867DF7F005F0898 /* Fakery in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				D307C49128678A1B005F0898 /* ProgressBarView.swift */,
+				D307C49A2867DFAF005F0898 /* Faker.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -134,6 +139,9 @@
 			dependencies = (
 			);
 			name = AsyncAwaitApp;
+			packageProductDependencies = (
+				D307C4982867DF7F005F0898 /* Fakery */,
+			);
 			productName = AsyncAwaitApp;
 			productReference = D30845212862CDA900085534 /* AsyncAwaitApp.app */;
 			productType = "com.apple.product-type.application";
@@ -162,6 +170,9 @@
 				Base,
 			);
 			mainGroup = D30845182862CDA900085534;
+			packageReferences = (
+				D307C4972867DF7F005F0898 /* XCRemoteSwiftPackageReference "Fakery" */,
+			);
 			productRefGroup = D30845222862CDA900085534 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -193,6 +204,7 @@
 				D3877AD8286655E500C9FB6F /* BankAccountDemoViewController.swift in Sources */,
 				D307C48B286754FB005F0898 /* DownloadManagerViewModel.swift in Sources */,
 				D307C48F2867560A005F0898 /* DownloadTaskStatus.swift in Sources */,
+				D307C49B2867DFAF005F0898 /* Faker.swift in Sources */,
 				D307C49228678A1B005F0898 /* ProgressBarView.swift in Sources */,
 				D30845392862D04600085534 /* BankAccount.swift in Sources */,
 				D307C49428678BC3005F0898 /* DownloadTaskCellView.swift in Sources */,
@@ -408,6 +420,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D307C4972867DF7F005F0898 /* XCRemoteSwiftPackageReference "Fakery" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vadymmarkov/Fakery";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D307C4982867DF7F005F0898 /* Fakery */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D307C4972867DF7F005F0898 /* XCRemoteSwiftPackageReference "Fakery" */;
+			productName = Fakery;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D30845192862CDA900085534 /* Project object */;
 }

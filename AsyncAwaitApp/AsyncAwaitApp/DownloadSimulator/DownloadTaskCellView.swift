@@ -20,7 +20,7 @@ struct DownloadTaskCellView: View {
                 VStack(alignment: .leading, spacing: 0) {
                     Text(task.name).font(.title2)
                     Spacer().frame(width: 0, height: 0)
-                    Text(task.url).font(.subheadline)
+                    Text(task.url).font(.subheadline).lineLimit(1)
                     Spacer().frame(width: 0, height: 6)
                     ProgressBarView(progress: 20)
                         .cornerRadius(5)

@@ -7,8 +7,6 @@
 
 import Foundation
 
-
-
 class DownloadManagerViewModel: ObservableObject {
     
     @Published private(set) var tasks: [DownloadTask]
@@ -18,10 +16,10 @@ class DownloadManagerViewModel: ObservableObject {
     
     init() {
         tasks = [
-            .init(name: "Task1", url: "abc", status: .idle, target: 1000),
-            .init(name: "Task2", url: "abc", status: .cancelled, target: 1000),
-            .init(name: "Task3", url: "abc", status: .finished, target: 1000),
-            .init(name: "Task4", url: "abc", status: .inProgress(20), target: 1000)
+            .init(name: faker.name.firstName(), url: faker.internet.url(), status: .idle, target: 1000),
+            .init(name: faker.name.firstName(), url: faker.internet.url(), status: .cancelled, target: 1000),
+            .init(name: faker.name.firstName(), url: faker.internet.url(), status: .finished, target: 1000),
+            .init(name: faker.name.firstName(), url: faker.internet.url(), status: .inProgress(20), target: 1000)
         ]
     }
     
