@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='raw' buildActiveScheme='true' importAppTypes='true'>
+    <pages>
+        <page name='Welcome'/>
+        <page name='Data Types'/>
+        <page name='Control Flow'/>
+        <page name='Optional'/>
+        <page name='Functions and Closures'/>
+        <page name='Classes'/>
+        <page name='Actor'/>
+        <page name='Structs'/>
+        <page name='Enums'/>
+        <page name='Value Type v.s. Reference Type'/>
+        <page name='Classes v.s. Structs v.s. Enum v.s. Actor'/>
+        <page name='Protocol &amp; Extensions'/>
+        <page name='Error Handling'/>
+        <page name='Generics'/>
+        <page name='Generics &amp; Inheritance Best Practice'/>
+        <page name='Async &amp; Await'/>
+    </pages>
+</playground>
