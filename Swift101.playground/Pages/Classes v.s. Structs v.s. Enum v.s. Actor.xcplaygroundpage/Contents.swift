@@ -2,8 +2,6 @@
  
 # Class v.s. Struct v.s. Enum v.s. Actor
 
- WIP 🚧
-
  Class:
 
  - Reference type
@@ -34,4 +32,13 @@
  - init ✅ deinit ❌
  - properties ✅ methods ✅ subscripts ✅
  - thread-safe ❌
+
+# When are each one best for?
+
+ - Almost always use an `Enum` for transactional data.
+ - Almost always use an `Actor` for isolated data.
+ - Use a `Struct` to group bits of transactional data
+ - Use `Class` when you need reference semantics and don't care about concurrent access
+ - Use `Class` when you need subclass NSObject
  */
+

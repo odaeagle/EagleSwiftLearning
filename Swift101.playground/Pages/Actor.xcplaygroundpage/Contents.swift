@@ -5,7 +5,7 @@ import UIKit
 
 ## Actor
  
- WIP 🚧
+ In simpliest term, Actor is a thread safe class
 
  */
 
@@ -30,22 +30,4 @@ actor SavingAccount {
         balance -= amount
         return true
     }
-}
-
-let account = SavingAccount(balance: 0)
-
-func makeDeposit() async -> Bool {
-    Thread.sleep(forTimeInterval: TimeInterval.random(in: 1..<2))
-    await account.deposit(amount: 100)
-    return true
-}
-
-Task {
-    print("Start", Thread.current)
-    async let result1 = makeDeposit()
-    async let result2 = makeDeposit()
-    async let result3 = makeDeposit()
-    
-    let results = await [result1, result2, result3]
-    print(results)
 }

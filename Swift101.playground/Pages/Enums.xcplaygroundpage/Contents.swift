@@ -3,8 +3,7 @@ import CoreGraphics
 /*:
  
 # Enums
-
- WIP 🚧
+ 
  "
  An enumeration defines a common type for a group of related values and enables you to work with those values in a type-safe way within your code.
 
@@ -44,15 +43,34 @@ print("value from state", valueFromState(PostState.empty))
 print("value from state", valueFromState(.full))
 
 /*:
+### Note
+
+ It's better to write the above function as a method to enum, yes, enum can have its own method
+ */
+
+/*:
  
 ## Enum with associated value
  
  */
 
-enum Shape {
+enum Shape: Equatable {
     case triangle(width: CGFloat, height: CGFloat)
     case sqaure(length: CGFloat)
     case rectangle(width: CGFloat, height: CGFloat)
+    case other
+
+    /* Enum can have method! */
+    func betterArea() -> CGFloat {
+        switch self {
+        case .triangle(let width, let height):
+            return width * height / 2
+        case .rectangle(let width, let height):
+            return width * height
+        default:
+            return -1
+        }
+    }
 }
 
 func getShapeArea(_ shape: Shape) -> CGFloat {
@@ -69,3 +87,10 @@ func getShapeArea(_ shape: Shape) -> CGFloat {
 
 print("Triangle area", getShapeArea(.triangle(width: 10, height: 15)))
 
+// Note you have to let the enum conforms to Equatable to be able to
+// compare two shapes
+let shape1 = Shape.rectangle(width: 20, height: 10)
+let shape2 = Shape.rectangle(width: 20, height: 10)
+let shape3 = Shape.triangle(width: 20, height: 10)
+print(shape1 == shape2)
+print(shape2 == shape3)

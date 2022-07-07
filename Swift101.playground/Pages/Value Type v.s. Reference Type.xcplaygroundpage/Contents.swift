@@ -1,8 +1,6 @@
 /*:
 
 # Value Type v.s. Reference Type
- 
- WIP 🚧
 
  Types in Swift fall into one of two categories,
 
@@ -11,15 +9,7 @@
  technically, *value types* means each instance keep a unique copy of its data, and *refernce types* instances share a single copy of the data.
 
  In simple terms, when you assign/initialize/argument pass a *value type* will create its own unique copy of its data.
-
- For example, Int is a value type, changing b does not affect a
- But you may wonder, a will not be changed in any language right? because
- we are only changing the variable b
  */
-var a = 5
-var b = a
-b = 8
-print(a, b)
 
 /*:
  Check out the following example, we use both class/struct to represent
@@ -110,7 +100,16 @@ pc1.x = 8
 // ps1.x = 9
 
 /*:
- More on struct
+ Pop quiz, which of the following C definition allows you to modify the content
+ but not the pointer itself
+ - `int* p;`
+ - `const int* p;`
+ - `int* const p;`
+ - `const int* const p;`
+ */
+
+/*:
+ ## More on struct
  */
 
 struct Event {
@@ -136,9 +135,32 @@ struct Event {
 }
 
 /*:
- 🚧 WIP
+ ## Copy-On-Write (COW)
 
- Explain COW
-
-
+ Since Array/Dictionary/Set are value types, you may wonder if we copy an array to a variable, is Swift going to copy the whole array? Isn't that a potential waste of memory? Well, Swift has a clever solution, Swift will allow two variables to point to same memory as long as there is no write operation.
  */
+
+func address(of o: UnsafeRawPointer) -> Int {
+    Int(bitPattern: o)
+}
+
+var arr1 = [1, 2, 3, 4]
+var arr2 = arr1
+
+address(of: &arr1)
+address(of: &arr2)
+arr2[0] = 8
+address(of: &arr1)
+address(of: &arr2)
+
+/*:
+ ## Struct does not have COW
+
+ It's possible to make it COW, but not COW by default
+ */
+
+var anotherPosnStruct1 = PosnStruct(x: 5, y: 10)
+var anotherPosnStruct2 = anotherPosnStruct1
+
+address(of: &anotherPosnStruct1)
+address(of: &anotherPosnStruct2)
